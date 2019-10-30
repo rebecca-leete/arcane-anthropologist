@@ -1,3 +1,66 @@
 html {
-  background-color: #405926;
+  background-color: white;
+}
+
+
+/*  ---CONTAINERS---  */
+
+.container {
+  position: relative;
+  display: flex;
+}
+
+.c-fullwidth {
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.c-fullwidth-content {
+  padding: 2rem;
+  font-size: 3.5rem;
+}
+
+.c-feature {
+  margin: 5rem auto;
+  width: 80%;
+  border: solid #9B9B9B 3px;
+}
+
+.c-feature-content {
+  padding: 1em;
+  text-align: center
+}
+
+.c-thumbnail {
+  display: flex;
+  border-radius: 20px;
+  margin: 3rem auto;
+  max-width: 30%;
+}
+
+.c-thumbnail-content {
+  padding: 1em;
+  text-align: center
+}
+
+.c-thumbnail-img {
+  border-radius: 100%;
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+}
+
+.yellow {
+  border: solid #EFC83B 3px;
+  background-color: #FCF6E2;
+  color: #EFC83B;
+}
+
+/*  ---THUMBNAILS---  */
+
+.b-primary {
+  background-color: #9572A2;
+  border-radius: 25px;
+  width: 50%;
 }
