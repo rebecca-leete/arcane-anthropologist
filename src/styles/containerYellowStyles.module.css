@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem;
+  border: solid #EFC83B 3px;
+  background-color: #FCF6E2;
+}
+
+.content {
+  padding: 2rem;
+  font-size: 3.5rem;
+  color: #EFC83B;
+  text-align: right;
+  border: solid #EFC83B 3px;
+  background-color: #FCF6E2;
+}

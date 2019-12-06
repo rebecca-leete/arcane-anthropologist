@@ -5,10 +5,10 @@ import { Link } from "gatsby"
 export default () => {
   return (
     <div style={{display:'flex', padding:'15px'}}>
-      <Link to="/"><MenuItem MenuText="HOME" /></Link>
-      <Link to="/about"><MenuItem MenuText="ABOUT" /></Link>
-      <Link to="/anthblog"><MenuItem MenuText="ANTHRO BLOG" /></Link>
-      <Link to="/arcblog"><MenuItem MenuText="ARCANE BLOG" /></Link>
+      <Link to="/" className="menu-item"><MenuItem MenuText="Home" /></Link>
+      <Link to="/about" className="menu-item"><MenuItem MenuText="About" /></Link>
+      <Link to="/anthblog" className="menu-item"><MenuItem MenuText="Anthro" /></Link>
+      <Link to="/arcblog" className="menu-item"><MenuItem MenuText="Arcane" /></Link>
     </div>
   )
 }

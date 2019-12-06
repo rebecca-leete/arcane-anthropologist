@@ -1,13 +1,12 @@
 import React from "react"
-import Menu from "../components/Menu"
+import Header from "../components/Header"
+import ThumbnailRow from "../components/containers/ThumbnailRow"
 
 export default () => {
   return (
     <div style={{backgroundColor:'#563E23', height:'500px'}}>
-      <div id="title">
-        <h1 style={{color:'#FDFAED'}}>Anthro Blog</h1>
-      </div>
-      <Menu />
+      <Header />
+      <ThumbnailRow />
     </div>
   )
 }
