@@ -1,5 +1,8 @@
 import React from "react"
 import Menu from "../components/Menu"
+import { Link } from "gatsby"
+
+/* CSS NEEDS REFACTORING */
 
 export default () => {
   return (
@@ -7,10 +10,10 @@ export default () => {
       <div>
         <img id="header-img" src="images/aa-logo.png" alt="logo"></img>
       </div>
-      <div class="title" id="header-title">
+      <Link to="/" class="title" id="header-title">
         <p>The</p>
-        <h1> Arcane Anthropologist</h1>
-      </div>
+        <div id="title"> Arcane Anthropologist</div>
+      </Link>
       <div id="header-menu">
       <Menu />
       </div>

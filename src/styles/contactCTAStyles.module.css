@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  height: 400px;
+  background-color: #C0D0B0;
+}
+
+.containerFocal {
+  border: solid white 3px;
+  width: 40%;
+  margin: auto;
+  padding: 3rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  max-height: 50%;
+  max-width: 40%;
+  overflow: auto;
+}
+
+.content {
+  color: #364B20;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 24px;
+}
+
+.button {
+  background-color: #A182A9;
+  width: 70%;
+  height: 3rem;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+}
+

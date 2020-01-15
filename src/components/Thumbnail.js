@@ -8,8 +8,8 @@ export default props => {
         <div className={thumbnailStyles.content}>
           <div>
             <img className={thumbnailStyles.image} src={props.ImgSrc} alt={props.ImgAlt}></img>
-            <h2>{props.Title}</h2>
-            <p>{props.Text}</p>
+            <div className={thumbnailStyles.title}>{props.Title}</div>
+            <p className={thumbnailStyles.text}>{props.Text}</p>
           </div>
         </div>
     </div>

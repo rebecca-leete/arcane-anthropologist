@@ -1,23 +1,30 @@
 import React from "react"
-// import Menu from "../components/Menu"
 import Header from "../components/Header"
+import FullWidthImage from "../components/containers/FullWidthImage"
+import ContactCTA from "../components/ContactCTA"
+import FeatureTextImage from "../components/containers/FeatureTextImage"
+import ThumbnailRow from "../components/containers/ThumbnailRow"
 
 
 export default () => 
 <div>
   <Header />
-  <div style={{width:'100%', height:'600px', backgroundColor:'#A8B39C', display:'flex', justifyContent:'center'}}>
-    <img class="c-fullwidth-image" style={{margin:'auto'}} src="https://nimentrix.files.wordpress.com/2018/12/chiara-bautista-traveling-subway-wolf.jpg" alt="rabbit girl and starwolf"/></div>
   
-  <div class="container c-feature">
-    <h1 class="c-feature-content">What is this space?? Intro</h1>
+    <FullWidthImage ImgSrc="/images/cosmic-wolf.jpg"
+        Text="And thus we find ourselves in the midst of the end of a very ancient one who is to be that which is neither spoken nor said, and can be done." 
+      />
+  <div style={{backgroundColor:'#FCF6E2'}}>
+    <ThumbnailRow />
   </div>
   
-  <div style={{height:'600px', border:'solid black 1pt'}}>
-    <h1 style={{textAlign:'center', paddingTop:'300px'}}>Who is this person?? Intro</h1>
-  </div>
-  
+  <FeatureTextImage 
+    imgSrc="/images/artemisme.jpg" imgAlt="artemisme"
+    title="About the Me"
+    text="This is some stuff about me and why I’m really cool and interesting and why you want to know more about me… For example I’m a badass forest fey and an alright stoner"
+    button="Oooh how intriguing!"
+  />
+  <ContactCTA />
   <div style={{height:'100px', backgroundColor:'#72845E'}}>
-    <h3 style={{textAlign:'center', paddingTop:'20px'}}>Footerrrrrrrrrrr</h3>
+    <h3 style={{textAlign:'center', paddingTop:'20px', margin:'0'}}>Footerrrrrrrrrrr</h3>
   </div>
 </div>

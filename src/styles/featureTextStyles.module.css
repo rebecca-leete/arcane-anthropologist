@@ -1,0 +1,16 @@
+.container{
+  margin: 5rem auto;
+  width: 80%;
+  border: solid #9B9B9B 3px;
+  border-radius: 10px;
+}
+
+.title {
+  padding: 1.5em 1em 0 1.5em;;
+  font-size: 28px;
+}
+
+.content {
+  padding: 2.5em;
+  line-height: 1.5;
+}

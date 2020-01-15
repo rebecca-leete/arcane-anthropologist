@@ -1,0 +1,40 @@
+.container {
+  margin: 5rem auto;
+  width: 80%;
+  border: solid #9B9B9B 3px;
+  border-radius: 10px;
+  display: flex;
+  padding: 4rem;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.image {
+  max-width: 230px;
+  max-height: 350px;
+  border-radius: 50%;
+  margin-right: 2rem;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 3rem;
+}
+
+.text {
+  line-height: 1.9;
+  margin-bottom: 3rem;
+}
+
+.button {
+  background-color: #A182A9;
+  width: 70%;
+  height: 3rem;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+}

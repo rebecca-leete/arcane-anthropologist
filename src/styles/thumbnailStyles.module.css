@@ -2,6 +2,7 @@
   display: flex;
   border-radius: 20px;
   margin: auto 3rem;
+  background-color: white;
 }
 
 .image {
@@ -11,8 +12,15 @@
   object-fit: cover;
 }
 
+.title {
+  color: #EDD16A;
+  font-size: 20px;
+  padding-top: 1em;
+}
+
 .content {
-  padding: 1em;
+  color: #A7A49B;
+  padding: 1.5em;
   text-align: center;
   margin: auto;
 }
