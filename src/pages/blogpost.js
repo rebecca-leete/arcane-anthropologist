@@ -1,20 +1,31 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 import FullWidthImage from "../components/containers/FullWidthImage"
 import TitleImage from "../components/containers/TitleImage"
 import FeatureText from "../components/containers/FeatureText"
-import Header from "../components/Header"
+import Layout from "../components/Layout"
 import FullWidthYellow from "../components/containers/FullWidthYellow"
-import ContactCTA from "../components/ContactCTA"
 import FeatureTextImage from "../components/containers/FeatureTextImage"
 
 
 export default () => {
+  const data = useStaticQuery (
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            latestBlog
+        }
+      }
+    }
+    `
+  )
   return (
-    <div>
-    <Header />
+    <Layout>
     <FullWidthYellow />
-      <TitleImage Text="Dreaming of Worms" ImgSrc="/images/AK2.jpg" />
-      <FeatureText Title="Introduction" Content="This is a buzzy as dream I had a couple years ago. I should probably sell it to Warner Bros or something." />
+      <TitleImage Text={data.site.siteMetadata.latestBlog} ImgSrc="/images/AK2.jpg" ImgAlt="AK2"/>
+      <FeatureText Title="Introduction" Content={"This is a buzzy as dream I had a couple years ago. I should probably sell it to Warner Bros or something."} />
       <p className="blog-post-content">
         Me and my family had just travelled to a town down south, and heard that there was going to be an assassination attempt on the Mayor of the town, who was a good person. He and one of his “good friends” – a narrow man with a really big smile and lines on his face, who instantly gave off a devious, malicious vibe in the dream (I think he was actually a long time criminal mastermind) – were practicing some archery together. By the time I got there, he had turned his bow on the Mayor, who was trying to talk to him to find an explanation for this genuinely unexpected betrayal. I had a bow as well, and tried to shoot the criminal before he shot the Mayor, but my shots were really poor, and I got discovered. I was only a couple feet away in the dream, so when he turned his bow on me I raced over to grab it so he couldn’t aim it at me. Then I felt this stabbing in my hand, and saw that there was a little mechanism at the top of the bow, where my hand was, that had extended the bow by like an inch, revealing two spikes facing inward to each other, and when the pressure of my hand went on them, they clamped shut and stabbed me. The criminal smiled when he saw, and explained with an air of immense satisfaction that I had just been injected with a deadly, fast-acting poison. I needed to get to a hospital, fast. We had no cars, so I just started running back north. The nearest hospital was in Nelson. As I left the town, my ‘sister’ (who was actually my cousin Courtney), rode up beside me and said I could take her horse. I had no idea how to get on or ride, but I managed to fluke most of it, and set off at a gallop. The rest of my family was also racing to the hospital in whatever way they could. I remembered the commands from when I went horse riding in Iceland, and managed to speed across the country side without any incident. I remember feeling my hand go numb, and freaking out because I had no idea how far the poison had spread, and after a while the numbness subsided again, for better or for worse. I got the hospital and was taken swiftly inside. I burst into the waiting room and pushed past all the patients and explained breathlessly what was going on, and went into a little side room without even asking where I should go. As it turned out it was the right place to go, and some people took me into a better-lit room and did some blood tests etc. I think my family had arrived by then too. The doctor didn’t seem that interested in my well-being, and in the end he explained that I hadn’t been poisoned at all, that was just a front to get you up to the hospital. In reality, I had been injected with a kind of deadly worm, and that had needed to be transported up to him covertly because the criminal couldn’t leave that town. I, along with everyone else, was horrified. You could see the little worm under the microscope, extracted in my “blood test”, swimming along. It had a gaping mouth with thousands of teeth, and no eyes, and it was growing in an alarming rate. It fed on sugar apparently, and could smell it in anything around it. It was incredibly fast and reproduced faster than anyone could control. It was meant to be at the forefront of biological warfare. We all protested – couldn’t the doctor see the insanity and danger in this? The uncontrollability of it? He was unphased. Somehow the worm had already grown to the size of a dog, and I knew it was going to kill everyone in the hospital. I smashed part of the massive window panel that overlooked the country side, and leapt out, followed soon after by the horse (my horse?) in a beautiful display of loyalty. I hopped on and rode off, still heading north.
       </p>
@@ -29,7 +40,6 @@ export default () => {
         text="This is some stuff about me and why I’m really cool and interesting and why you want to know more about me… For example I’m a badass forest fey and an alright stoner"
         button="Oooh how intriguing!"
       />
-      <ContactCTA />
-    </div>
+    </Layout>
   )
 }

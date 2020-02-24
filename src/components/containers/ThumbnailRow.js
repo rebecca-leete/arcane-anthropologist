@@ -1,18 +1,33 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Thumbnail from "../Thumbnail"
 
 export default () => {
+  const data = useStaticQuery (
+    graphql`
+      query  {
+        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+          edges {
+            node {
+              excerpt(pruneLength: 50)
+              frontmatter {
+                title
+                date
+        }
+      }
+    }
+  }
+}
+
+    `
+  )
   return (
     <div class="grid" id="thumbnail-row">
-      <div><Thumbnail ImgSrc="/images/lotus.jpg" ImgAlt="lotus"
-        Title="Lotus get back to you" Text="What a blooming beautiful day it is procrastinate!"
-      /></div>
-      <div><Thumbnail ImgSrc="/images/lotus.jpg" ImgAlt="lotus"
-        Title="Lotus get back to you" Text="What a blooming beautiful day it is procrastinate!"
-      /></div>
-      <div><Thumbnail ImgSrc="/images/lotus.jpg" ImgAlt="lotus"
-        Title="Lotus get back to you" Text="What a blooming beautiful day it is procrastinate!"
-      /></div>
+
+    {data.allMarkdownRemark.edges.map(({node}) => (
+      <Thumbnail ImgSrc="images/calendula.jpeg" ImgAlt="calendula"
+      Title={node.frontmatter.title} Text={node.excerpt}/>
+    ))}
     </div>
   )
-}
+  }

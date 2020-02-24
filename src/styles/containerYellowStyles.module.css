@@ -7,10 +7,18 @@
 }
 
 .content {
-  padding: 2rem;
-  font-size: 3.5rem;
+  padding: 1rem;
+  font-size: 3rem;
   color: #EFC83B;
-  text-align: right;
   border: solid #EFC83B 3px;
   background-color: #FCF6E2;
+  text-decoration: none;
+}
+
+.content > a:visited {
+  color: #EDD16A;
+}
+
+.content > a:hover {
+  color: #FAC503
 }

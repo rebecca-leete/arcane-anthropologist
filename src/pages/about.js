@@ -1,17 +1,16 @@
 import React from "react"
-import Header from "../components/Header"
+
+import Layout from "../components/Layout"
 import FullWidthImage from "../components/containers/FullWidthImage"
-import ContactCTA from "../components/ContactCTA"
 
 
-export default () => {
+export default ({ data }) => {
   return (
-    <div style={{height:'500px'}}>
-      <Header />
-      <FullWidthImage ImgSrc="/images/AK5.jpg"
+    <Layout style={{height:'500px'}}>
+      <FullWidthImage ImgSrc="/images/AK5.jpg" ImgAlt="Cosmic Wolf"
         Text="And thus we find ourselves in the midst of the end of a very ancient one who is to be that which is neither spoken nor said, and can be done." 
       />
-      <ContactCTA />
-    </div>
+    </Layout>
   )
 }
+
