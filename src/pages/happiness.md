@@ -4,6 +4,7 @@ author: "Hugh Mackay"
 date: "2018-06-11"
 parent: "/anthblog"
 category: "Anthro"
+featureImage: "images/lotus.jpg"
 
 intro: {
   title: "Positive thinking is so 2000s",

@@ -19,6 +19,7 @@ export default () => {
               frontmatter {
                 title
                 date
+                featureImage
         }
       }
     }
@@ -27,13 +28,13 @@ export default () => {
 
     `
   )
-  //Next step is to filter by category!
+
   return (
     <Layout>
     <div style={{backgroundColor:'#563E23', height:'600px'}}>
       <div className={ThumbnailRowStyles.row}>
         {data.allMarkdownRemark.edges.map(({node}) => (
-      <Thumbnail ImgSrc="images/calendula.jpeg" ImgAlt="calendula"
+      <Thumbnail ImgSrc={node.frontmatter.featureImage} ImgAlt="calendula"
       Title={node.frontmatter.title} Text={node.excerpt} Link={node.fields.slug}/>
     ))}
       </div>

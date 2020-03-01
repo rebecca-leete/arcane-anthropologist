@@ -1,8 +1,10 @@
 .container {
-  display: flex;
+  display: grid;
   border-radius: 20px;
-  margin: auto 3rem;
+  margin: 3rem;
   background-color: white;
+  width: 100%;
+  
 }
 
 .image {
@@ -12,15 +14,34 @@
   object-fit: cover;
 }
 
-.title {
-  color: #EDD16A;
-  font-size: 20px;
-  padding-top: 1em;
-}
-
-.content {
-  color: #A7A49B;
-  padding: 1.5em;
-  text-align: center;
-  margin: auto;
+@media only screen and (min-width: 960px) {
+  .container {
+    display: flex;
+    border-radius: 20px;
+    margin: 3rem;
+    background-color: white;
+    min-width: 230px
+  }
+  
+  .image {
+    border-radius: 100%;
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+  }
+  
+  .title {
+    color: #EDD16A;
+    font-size: 20px;
+    padding-top: 1em;
+  }
+  
+  .content {
+    color: #A7A49B;
+    padding: 1.5em;
+    text-align: center;
+    margin: auto;
+  }
+  
+  
 }

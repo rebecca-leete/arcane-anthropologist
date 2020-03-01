@@ -4,6 +4,7 @@ author: "Rebecca Leete"
 date: "2020-06-28"
 parent: "/arcblog"
 category: "Arcane"
+featureImage: "images/AK2.jpg"
 
 intro: {
   title: "Get ready for some sweet plot twists straight from the subconscious",

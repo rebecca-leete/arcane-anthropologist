@@ -71,7 +71,7 @@ a {
 }
 
 #thumbnail-row {
-  grid-template-columns:3fr 3fr 3fr;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
   padding: 3rem 0;
 }
 

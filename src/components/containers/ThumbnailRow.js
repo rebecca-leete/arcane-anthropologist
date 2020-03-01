@@ -13,6 +13,7 @@ export default () => {
               frontmatter {
                 title
                 date
+                featureImage
         }
       }
     }
@@ -25,7 +26,7 @@ export default () => {
     <div class="grid" id="thumbnail-row">
 
     {data.allMarkdownRemark.edges.map(({node}) => (
-      <Thumbnail ImgSrc="images/calendula.jpeg" ImgAlt="calendula"
+      <Thumbnail ImgSrc={node.frontmatter.featureImage} ImgAlt="calendula"
       Title={node.frontmatter.title} Text={node.excerpt}/>
     ))}
     </div>

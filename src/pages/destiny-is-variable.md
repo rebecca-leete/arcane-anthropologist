@@ -4,6 +4,7 @@ author: "Owen K Walters"
 date: "2020-02-05"
 parent: "/anthblog"
 category: "Anthro"
+featureImage: "images/calendula.jpeg"
 
 intro: {
   title: "Probably some stuffy circular philosophy",

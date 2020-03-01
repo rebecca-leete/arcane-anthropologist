@@ -23,3 +23,8 @@ export default () =>
     button="Oooh how intriguing!"
   />
 </Layout>
+
+//explore elements of childImageSharp
+//trial gatsbyimg with fullwidthimg component
+//transfer image directory completely to src
+//restyle thumbnailrow under 960px

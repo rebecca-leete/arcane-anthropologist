@@ -19,11 +19,14 @@ export default ({ data }) => {
 
       <h3>Posts so far</h3>
       {data.allMarkdownRemark.edges.map(({node}) => (
+        <Link to={node.fields.slug}>
+
         <div key={node.id}>
           <h4>{node.frontmatter.title}</h4> - {node.frontmatter.date}
           <p>{node.excerpt}</p>
 
         </div>
+        </Link>
         
       ) )}
       </div>
@@ -32,15 +35,14 @@ export default ({ data }) => {
   )
 }
 
-//explore elements of childImageSharp
-//trial gatsbyimg with fullwidthimg component
+
 
 export const query = graphql`
 query MyQuery {
   file(relativePath: {eq: "images/hand.jpg"}) {
     id
     childImageSharp {
-      fluid(maxHeight: 400) {
+      fluid(maxHeight: 600) {
         aspectRatio
         base64
         sizes
@@ -54,6 +56,9 @@ query MyQuery {
   }) {
     edges {
       node {
+        fields {
+          slug
+        }
         frontmatter {
           title
           date

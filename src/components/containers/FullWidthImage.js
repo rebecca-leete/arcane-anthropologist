@@ -1,4 +1,6 @@
 import React from "react"
+import Img from "gatsby-image"
+
 import fullWidthImageStyles from "../../styles/fullWidthImageStyles.module.css"
 
 export default props => {

@@ -6,6 +6,7 @@
 
 module.exports = {
     siteMetadata: {
+      title: `The Arcane Anthropologoist`,
       tester: `Booperdy doop I'm a zesty test!`,
       testQuote: `sike`,
       latestBlog: `Dreaming of Worms`,
